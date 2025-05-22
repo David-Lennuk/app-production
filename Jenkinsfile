@@ -8,10 +8,10 @@ pipeline {
         }
 stage('Upload to Dockerhub') {
 	steps {
-		 withDockerRegistry([ credentialsId: "docker", url: "" ]) {
+		
 			 sh "docker login"
 	    sh 'docker push davidlennuk808/app-prod'
-	     }
+	
 	}
 	}
     }
