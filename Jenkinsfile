@@ -8,7 +8,7 @@ pipeline {
         }
 stage('Upload to Dockerhub') {
 	steps {
-	    sh 'docker build . -t davidlennuk808/app-prod'
+	    sh 'docker push davidlennuk808/app-prod'
 	     }
 	}
     }
